@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eWWE8ClXEeiq2JKz40OIyg" name="System">
+  <packageImport xmi:id="_ag0f4CmOEeikg4SoasUEWg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_-DOtcClXEeiq2JKz40OIyg" name="NewModel Subject" useCase="_E1DmkClYEeiq2JKz40OIyg _XFQAcClYEeiq2JKz40OIyg _fHpwoClYEeiq2JKz40OIyg _keggkClYEeiq2JKz40OIyg _rlw3IClYEeiq2JKz40OIyg">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_E1DmkClYEeiq2JKz40OIyg" name="Login Account" subject="_-DOtcClXEeiq2JKz40OIyg"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_XFQAcClYEeiq2JKz40OIyg" name="Order Meal" subject="_-DOtcClXEeiq2JKz40OIyg">
+      <include xmi:id="_WTbsgClZEeiq2JKz40OIyg" addition="_E1DmkClYEeiq2JKz40OIyg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_fHpwoClYEeiq2JKz40OIyg" name="Make Payment" subject="_-DOtcClXEeiq2JKz40OIyg"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_keggkClYEeiq2JKz40OIyg" name="Make Credit Card Payment" subject="_-DOtcClXEeiq2JKz40OIyg">
+      <extend xmi:id="_fp8I4ClZEeiq2JKz40OIyg" extendedCase="_fHpwoClYEeiq2JKz40OIyg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rlw3IClYEeiq2JKz40OIyg" name="Make Paypal Payment" subject="_-DOtcClXEeiq2JKz40OIyg">
+      <extend xmi:id="_g9vTEClZEeiq2JKz40OIyg" extendedCase="_fHpwoClYEeiq2JKz40OIyg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_KORuAClYEeiq2JKz40OIyg" name="Customer">
+    <eAnnotations xmi:id="_KORuASlYEeiq2JKz40OIyg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_KORuAilYEeiq2JKz40OIyg" key="Human"/>
+    </eAnnotations>
+    <generalization xmi:id="_6Oha0ClZEeiq2JKz40OIyg" general="_w915oClZEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_13keIClYEeiq2JKz40OIyg" name="A_customer_login account" memberEnd="_13keISlYEeiq2JKz40OIyg _13keIilYEeiq2JKz40OIyg">
+    <ownedEnd xmi:id="_13keISlYEeiq2JKz40OIyg" type="_KORuAClYEeiq2JKz40OIyg" association="_13keIClYEeiq2JKz40OIyg"/>
+    <ownedEnd xmi:id="_13keIilYEeiq2JKz40OIyg" type="_E1DmkClYEeiq2JKz40OIyg" association="_13keIClYEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-kWBAClYEeiq2JKz40OIyg" name="A_customer_order meal" memberEnd="_-kWBASlYEeiq2JKz40OIyg _-kWBAilYEeiq2JKz40OIyg">
+    <ownedEnd xmi:id="_-kWBASlYEeiq2JKz40OIyg" type="_KORuAClYEeiq2JKz40OIyg" association="_-kWBAClYEeiq2JKz40OIyg"/>
+    <ownedEnd xmi:id="_-kWBAilYEeiq2JKz40OIyg" type="_XFQAcClYEeiq2JKz40OIyg" association="_-kWBAClYEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IOVaEClZEeiq2JKz40OIyg" name="A_customer_make Payment" memberEnd="_IOWBIClZEeiq2JKz40OIyg _IOWBISlZEeiq2JKz40OIyg">
+    <ownedEnd xmi:id="_IOWBIClZEeiq2JKz40OIyg" type="_KORuAClYEeiq2JKz40OIyg" association="_IOVaEClZEeiq2JKz40OIyg"/>
+    <ownedEnd xmi:id="_IOWBISlZEeiq2JKz40OIyg" type="_fHpwoClYEeiq2JKz40OIyg" association="_IOVaEClZEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_p_LeYClZEeiq2JKz40OIyg" name="Manager">
+    <eAnnotations xmi:id="_p_LeYSlZEeiq2JKz40OIyg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_p_LeYilZEeiq2JKz40OIyg" key="Human"/>
+    </eAnnotations>
+    <generalization xmi:id="_4LDHMClZEeiq2JKz40OIyg" general="_w915oClZEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_w915oClZEeiq2JKz40OIyg" name="User">
+    <eAnnotations xmi:id="_w9_DkClZEeiq2JKz40OIyg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_w9_DkSlZEeiq2JKz40OIyg" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_QvivsCllEeiq2JKz40OIyg" name="OrderMeal" node="_qj1NICllEeiq2JKz40OIyg _5J_lQCllEeiq2JKz40OIyg _QKyAUClmEeiq2JKz40OIyg _ZJH0UClmEeiq2JKz40OIyg _cL064ClnEeiq2JKz40OIyg _Sg_X0CloEeiq2JKz40OIyg _fRX6ECloEeiq2JKz40OIyg _vqalECloEeiq2JKz40OIyg _J1ZEMClpEeiq2JKz40OIyg _VS_v8ClpEeiq2JKz40OIyg _eJhrwClpEeiq2JKz40OIyg _mNT8AClpEeiq2JKz40OIyg _gUyM8ClqEeiq2JKz40OIyg _35c7sClrEeiq2JKz40OIyg _C4eOAClsEeiq2JKz40OIyg _TQ4KYCltEeiq2JKz40OIyg _wQ8AQCltEeiq2JKz40OIyg _DGoT4CluEeiq2JKz40OIyg">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ltU7wClmEeiq2JKz40OIyg" name="[A-la-carte meals]" target="_QKyAUClmEeiq2JKz40OIyg" source="_5J_lQCllEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ltU7wSlmEeiq2JKz40OIyg" name="Decision1_To_System retrieves a-la-carte meals_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ltU7wilmEeiq2JKz40OIyg" name="Decision1_To_System retrieves a-la-carte meals_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_p55C0ClmEeiq2JKz40OIyg" name="[Set meals]" target="_ZJH0UClmEeiq2JKz40OIyg" source="_5J_lQCllEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_p55p4ClmEeiq2JKz40OIyg" name="Decision1_To_System retrieves set meals_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_p55p4SlmEeiq2JKz40OIyg" name="Decision1_To_System retrieves set meals_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xFZx0ClnEeiq2JKz40OIyg" target="_5J_lQCllEeiq2JKz40OIyg" source="_cL064ClnEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_xFZx0SlnEeiq2JKz40OIyg" name="System prompts for meal option selection_To_Decision1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_xFaY4ClnEeiq2JKz40OIyg" name="System prompts for meal option selection_To_Decision1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hCocUCloEeiq2JKz40OIyg" target="_fRX6ECloEeiq2JKz40OIyg" source="_QKyAUClmEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_hCocUSloEeiq2JKz40OIyg" name="System retrieves a-la-carte meals_To_Merge1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_hCocUiloEeiq2JKz40OIyg" name="System retrieves a-la-carte meals_To_Merge1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_h_3goCloEeiq2JKz40OIyg" target="_fRX6ECloEeiq2JKz40OIyg" source="_ZJH0UClmEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_h_3goSloEeiq2JKz40OIyg" name="System retrieves set meals_To_Merge1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_h_3goiloEeiq2JKz40OIyg" name="System retrieves set meals_To_Merge1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_l2WC8CloEeiq2JKz40OIyg" target="_Sg_X0CloEeiq2JKz40OIyg" source="_fRX6ECloEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_l2WC8SloEeiq2JKz40OIyg" name="Merge1_To_Customer selects a meal and indicates the quantity._guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_l2WC8iloEeiq2JKz40OIyg" name="Merge1_To_Customer selects a meal and indicates the quantity._weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_28RpICloEeiq2JKz40OIyg" target="_vqalECloEeiq2JKz40OIyg" source="_Sg_X0CloEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_28RpISloEeiq2JKz40OIyg" name="Customer selects a meal and indicates the quantity_To_ Customer adds the meal to the cart_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_28RpIiloEeiq2JKz40OIyg" name="Customer selects a meal and indicates the quantity_To_ Customer adds the meal to the cart_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ShYj8ClpEeiq2JKz40OIyg" target="_J1ZEMClpEeiq2JKz40OIyg" source="_vqalECloEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ShZLAClpEeiq2JKz40OIyg" name=" Customer adds the meal to the cart_To_System checks if meal is available_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ShZyEClpEeiq2JKz40OIyg" name=" Customer adds the meal to the cart_To_System checks if meal is available_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Z_uk0ClpEeiq2JKz40OIyg" target="_VS_v8ClpEeiq2JKz40OIyg" source="_J1ZEMClpEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_Z_uk0SlpEeiq2JKz40OIyg" name="System checks if meal is available_To_Decision2_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Z_uk0ilpEeiq2JKz40OIyg" name="System checks if meal is available_To_Decision2_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_74NiMClpEeiq2JKz40OIyg" name="[Meal is not available]" target="_mNT8AClpEeiq2JKz40OIyg" source="_VS_v8ClpEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_74NiMSlpEeiq2JKz40OIyg" name="Decision2_To_System notifies Customer the meal is not available_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_74NiMilpEeiq2JKz40OIyg" name="Decision2_To_System notifies Customer the meal is not available_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_81XuAClpEeiq2JKz40OIyg" name="[Meal is available]" target="_eJhrwClpEeiq2JKz40OIyg" source="_VS_v8ClpEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_81XuASlpEeiq2JKz40OIyg" name="Decision2_To_System updates the cart_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_81XuAilpEeiq2JKz40OIyg" name="Decision2_To_System updates the cart_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_h_xvIClqEeiq2JKz40OIyg" target="_gUyM8ClqEeiq2JKz40OIyg" source="_eJhrwClpEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_h_xvISlqEeiq2JKz40OIyg" name="System updates the cart_To_Merge2_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_h_xvIilqEeiq2JKz40OIyg" name="System updates the cart_To_Merge2_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jztx8ClqEeiq2JKz40OIyg" target="_gUyM8ClqEeiq2JKz40OIyg" source="_mNT8AClpEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jztx8SlqEeiq2JKz40OIyg" name="System notifies Customer the meal is not available_To_Merge2_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jztx8ilqEeiq2JKz40OIyg" name="System notifies Customer the meal is not available_To_Merge2_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Ht6S8ClsEeiq2JKz40OIyg" target="_C4eOAClsEeiq2JKz40OIyg" source="_qj1NICllEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_Ht6S8SlsEeiq2JKz40OIyg" name="InitialNode_To_Merge3_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Ht6S8ilsEeiq2JKz40OIyg" name="InitialNode_To_Merge3_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Ii6oUClsEeiq2JKz40OIyg" target="_cL064ClnEeiq2JKz40OIyg" source="_C4eOAClsEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_Ii6oUSlsEeiq2JKz40OIyg" name="Merge3_To_System prompts for meal option selection_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Ii6oUilsEeiq2JKz40OIyg" name="Merge3_To_System prompts for meal option selection_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WInB8ClsEeiq2JKz40OIyg" target="_35c7sClrEeiq2JKz40OIyg" source="_gUyM8ClqEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_WInB8SlsEeiq2JKz40OIyg" name="Merge2_To_Decision3_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WInB8ilsEeiq2JKz40OIyg" name="Merge2_To_Decision3_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xtf6UClsEeiq2JKz40OIyg" name="[Not all meals selected]" target="_C4eOAClsEeiq2JKz40OIyg" source="_35c7sClrEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_xtf6USlsEeiq2JKz40OIyg" name="Decision3_To_Merge3_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_xtf6UilsEeiq2JKz40OIyg" name="Decision3_To_Merge3_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_a9Ck0CltEeiq2JKz40OIyg" name="[All meals selected]" target="_TQ4KYCltEeiq2JKz40OIyg" source="_35c7sClrEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_a9Ck0SltEeiq2JKz40OIyg" name="Decision3_To_ Customer proceeds to checkout_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_a9Ck0iltEeiq2JKz40OIyg" name="Decision3_To_ Customer proceeds to checkout_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5MCTACltEeiq2JKz40OIyg" target="_wQ8AQCltEeiq2JKz40OIyg" source="_TQ4KYCltEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_5MCTASltEeiq2JKz40OIyg" name=" Customer proceeds to checkout_To_ System displays cart overview on screen_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_5MCTAiltEeiq2JKz40OIyg" name=" Customer proceeds to checkout_To_ System displays cart overview on screen_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_H-urQCluEeiq2JKz40OIyg" target="_DGoT4CluEeiq2JKz40OIyg" source="_wQ8AQCltEeiq2JKz40OIyg">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_H-urQSluEeiq2JKz40OIyg" name=" System displays cart overview on screen_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_H-urQiluEeiq2JKz40OIyg" name=" System displays cart overview on screen_To_ActivityFinal1_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_qj1NICllEeiq2JKz40OIyg" name="InitialNode" outgoing="_Ht6S8ClsEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_5J_lQCllEeiq2JKz40OIyg" name="D1" incoming="_xFZx0ClnEeiq2JKz40OIyg" outgoing="_ltU7wClmEeiq2JKz40OIyg _p55C0ClmEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QKyAUClmEeiq2JKz40OIyg" name="System retrieves a-la-carte meals" incoming="_ltU7wClmEeiq2JKz40OIyg" outgoing="_hCocUCloEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ZJH0UClmEeiq2JKz40OIyg" name="System retrieves set meals" incoming="_p55C0ClmEeiq2JKz40OIyg" outgoing="_h_3goCloEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_cL064ClnEeiq2JKz40OIyg" name="System prompts for meal option selection" incoming="_Ii6oUClsEeiq2JKz40OIyg" outgoing="_xFZx0ClnEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Sg_X0CloEeiq2JKz40OIyg" name="Customer selects a meal and indicates the quantity" incoming="_l2WC8CloEeiq2JKz40OIyg" outgoing="_28RpICloEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction4</body>
+    </node>
+    <node xmi:type="uml:MergeNode" xmi:id="_fRX6ECloEeiq2JKz40OIyg" name="M1" incoming="_hCocUCloEeiq2JKz40OIyg _h_3goCloEeiq2JKz40OIyg" outgoing="_l2WC8CloEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_vqalECloEeiq2JKz40OIyg" name=" Customer adds the meal to the cart" incoming="_28RpICloEeiq2JKz40OIyg" outgoing="_ShYj8ClpEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction5</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_J1ZEMClpEeiq2JKz40OIyg" name="System checks if meal is available" incoming="_ShYj8ClpEeiq2JKz40OIyg" outgoing="_Z_uk0ClpEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction6</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_VS_v8ClpEeiq2JKz40OIyg" name="D2" incoming="_Z_uk0ClpEeiq2JKz40OIyg" outgoing="_74NiMClpEeiq2JKz40OIyg _81XuAClpEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_eJhrwClpEeiq2JKz40OIyg" name="System updates the cart" incoming="_81XuAClpEeiq2JKz40OIyg" outgoing="_h_xvIClqEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction7</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_mNT8AClpEeiq2JKz40OIyg" name="System notifies Customer the meal is not available" incoming="_74NiMClpEeiq2JKz40OIyg" outgoing="_jztx8ClqEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction8</body>
+    </node>
+    <node xmi:type="uml:MergeNode" xmi:id="_gUyM8ClqEeiq2JKz40OIyg" name="M2" incoming="_h_xvIClqEeiq2JKz40OIyg _jztx8ClqEeiq2JKz40OIyg" outgoing="_WInB8ClsEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_35c7sClrEeiq2JKz40OIyg" name="D3" incoming="_WInB8ClsEeiq2JKz40OIyg" outgoing="_xtf6UClsEeiq2JKz40OIyg _a9Ck0CltEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_C4eOAClsEeiq2JKz40OIyg" name="M3" incoming="_Ht6S8ClsEeiq2JKz40OIyg _xtf6UClsEeiq2JKz40OIyg" outgoing="_Ii6oUClsEeiq2JKz40OIyg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TQ4KYCltEeiq2JKz40OIyg" name=" Customer proceeds to checkout" incoming="_a9Ck0CltEeiq2JKz40OIyg" outgoing="_5MCTACltEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction9</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wQ8AQCltEeiq2JKz40OIyg" name=" System displays cart overview on screen" incoming="_5MCTACltEeiq2JKz40OIyg" outgoing="_H-urQCluEeiq2JKz40OIyg">
+      <body>// TODO body of OpaqueAction10</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_DGoT4CluEeiq2JKz40OIyg" name="FinalNode" incoming="_H-urQCluEeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ia-fkCl5Eeiq2JKz40OIyg" name="Interfaces"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lSOZgCl5Eeiq2JKz40OIyg" name="Components">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_sCDukCl5Eeiq2JKz40OIyg" client="_lSOZgCl5Eeiq2JKz40OIyg" supplier="_ia-fkCl5Eeiq2JKz40OIyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_tanc8Cl5Eeiq2JKz40OIyg" name="Behaviours">
+    <packagedElement xmi:type="uml:Package" xmi:id="_wNnJACl5Eeiq2JKz40OIyg" name="UseCases">
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3uHGACl5Eeiq2JKz40OIyg" client="_wNnJACl5Eeiq2JKz40OIyg" supplier="_0WWgACl5Eeiq2JKz40OIyg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0WWgACl5Eeiq2JKz40OIyg" name="Actors"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_39SVACl6Eeiq2JKz40OIyg" name="Data">
+    <packagedElement xmi:type="uml:Class" xmi:id="_hB4ZICmOEeikg4SoasUEWg" name="Person" visibility="public">
+      <ownedAttribute xmi:id="_ksfpsCmOEeikg4SoasUEWg" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ksfpsSmOEeikg4SoasUEWg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ksfpsimOEeikg4SoasUEWg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_UY3NsCmPEeikg4SoasUEWg" name="age" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UY3NsSmPEeikg4SoasUEWg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UY3NsimPEeikg4SoasUEWg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VRbNYCmPEeikg4SoasUEWg" name="gender" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VRbNYSmPEeikg4SoasUEWg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VRbNYimPEeikg4SoasUEWg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_V9LgICmPEeikg4SoasUEWg" name="hobbies" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V9LgISmPEeikg4SoasUEWg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V9LgIimPEeikg4SoasUEWg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZZc14CmTEeikg4SoasUEWg" name="printInfo">
+        <ownedParameter xmi:id="_eW7cgCmTEeikg4SoasUEWg" name="vieweInfo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_7w6_4CmUEeikg4SoasUEWg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
