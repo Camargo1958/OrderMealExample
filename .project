@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<projectDescription>
-	<name>OrderMealExample</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-	</buildSpec>
-	<natures>
-		<nature>org.eclipse.sirius.nature.modelingproject</nature>
-	</natures>
+<?xml version="1.0" encoding="UTF-8"?> 
+<projectDescription> 
+<name>OrderMealExample</name> 
+<comment></comment> 
+<projects> </projects> 
+<buildSpec> </buildSpec> 
+<natures> 
+<nature>org.eclipse.sirius.nature.modelingproject</nature> 
+</natures> 
 </projectDescription>
